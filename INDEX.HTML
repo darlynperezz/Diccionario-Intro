@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OGTIC-Diccionary</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+    <div class="barra-superior">
+        <p class="Diccionario">OGTIC-Diccionario</p>
+        <button id="traductor">
+            <a href="https://www.freepik.es/icono/traduccion_4419586">
+                <img src="img/translation_4419586.png" alt="">
+            </a>
+        </button>
+        <div id="Inicio"></div>
+    </div>
+
+    <nav class="sidebar">
+        <ul>
+            <li onclick="mostrarSeccion('favoritos')">
+                <img src="img/Captura.PNG" alt="Favoritos"> <span class="F">Favoritos</span>
+            </li>
+            <li onclick="mostrarSeccion('interesante')">
+                <img src="img/Inte.PNG" alt="Interesante"> <span class="I">Interesante</span>
+            </li>
+            <li onclick="mostrarSeccion('personal')">
+                <img src="img/Per.PNG" alt="Personal"> <span class="P">Personal</span>
+            </li>
+            <li onclick="mostrarSeccion('nivel')">
+                <img src="img/NIVEL.PNG" alt="Nivel"> <span class="N">Nivel</span>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="search-bar">
+            <input type="text" id="buscador" placeholder="Escribir aquí...">
+            <button class="button" onclick="buscarPalabra()">🔍</button>
+            <ul id="sugerencias" class="suggestions-list"></ul>
+        </div>
+        <div id="contenido">
+            <p id="texto">Carro: My name is blue</p>
+            <button class="button" onclick="leerTexto()">🔊 Escuchar</button>
+        </div>
+    </main>
+
+    <aside class="info-bar">
+        <div id="palabras-leidas">Palabras leídas</div>
+        <div id="tiempo-en-pantalla">Tiempo en pantalla: <span id="reloj">00:00:00</span></div>
+    </aside>
+    <script src="SCRIPT.JS"></script>
+</body>
+
+</html>
